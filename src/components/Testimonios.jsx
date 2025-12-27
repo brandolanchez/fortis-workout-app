@@ -1,8 +1,4 @@
 import React from 'react';
-import avatar1 from '../../assets/Img/perfil/1.png';
-import avatar2 from '../../assets/Img/perfil/2.jpg';
-import avatar3 from '../../assets/Img/perfil/3.png';
-import avatar4 from '../../assets/Img/perfil/4.png';
 
 
 const Testimonios = () => {
@@ -10,22 +6,22 @@ const Testimonios = () => {
     {
       name: 'Marcelo De Vicente',
       quote: 'Fortis cambió mi forma de entrenar. Aquí encontré una comunidad que me impulsa a ser mejor cada día.',
-      avatar: avatar2,
+      avatar: '/assets/Img/perfil/2.jpg',
     },
     {
       name: 'Sebastien Faria',
       quote: 'Lo que más me gusta es el ambiente. No es solo ejercicio, es disciplina, mentoría y un propósito compartido.',
-      avatar: avatar1,
+      avatar: '/assets/Img/perfil/1.png',
     },
     {
       name: 'Adrian Ochoa',
       quote: 'Comencé sin experiencia y aquí aprendí técnica real. El progreso es visible y la motivación es constante.',
-      avatar: avatar3,
+      avatar: '/assets/Img/perfil/3.png',
     },
     {
       name: 'Edixo Villalobos',
       quote: 'Fortis es más que un grupo de entrenamiento. Es una familia comprometida con la excelencia y el crecimiento.',
-      avatar: avatar4,
+      avatar: '/assets/Img/perfil/4.png',
     },
   ];
 

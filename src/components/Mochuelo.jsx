@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import img1 from '../../assets/Img/mochuelo/Gemini_Generated_Image_b11qkzb11qkzb11q.jpg';
-import img2 from '../../assets/Img/mochuelo/mochuelo 2.jpg';
-
-const images = [img1, img2];
 
 const Mochuelo = () => {
+  const images = [
+    '/assets/Img/mochuelo/Gemini_Generated_Image_b11qkzb11qkzb11q.jpg',
+    '/assets/Img/mochuelo/mochuelo%202.jpg',
+  ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const Mochuelo = () => {
               key={img}
               src={img}
               alt="Mochuelo"
-              className={`absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'} ${img === img1 ? 'object-top' : 'object-center'}`}
+              className={`absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'} ${img === '/assets/Img/mochuelo/Gemini_Generated_Image_b11qkzb11qkzb11q.jpg' ? 'object-top' : 'object-center'}`}
             />
           ))}
         </div>

@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import VeredaImage from '../../assets/Img/Place/photo_2025-12-25_10-43-16.jpg';
-import SueloImage from '../../assets/Img/nosotros/tirados al suelo.png';
-import BanderinImage from '../../assets/Img/Place/banderin.jpg';
-import SegundaImage from '../../assets/Img/Place/segunda.jpg';
-import mer1 from '../../assets/Img/merchan/1.png';
-import mer2 from '../../assets/Img/merchan/2.png';
-import mer3 from '../../assets/Img/merchan/3.png';
-import mer4 from '../../assets/Img/merchan/photo_2025-12-25_14-00-06.jpg';
-import mer5 from '../../assets/Img/merchan/photo_2025-12-25_14-00-21.jpg';
-import mer6 from '../../assets/Img/merchan/photo_2025-12-25_14-00-26.jpg';
 
 const Patrocinios = () => {
-  const images = [BanderinImage, SegundaImage];
+  const images = ['/assets/Img/Place/banderin.jpg', '/assets/Img/Place/segunda.jpg'];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const imagesMerchan = [mer1, mer2, mer3, mer4, mer5, mer6];
+  const imagesMerchan = [
+    '/assets/Img/merchan/1.png',
+    '/assets/Img/merchan/2.png',
+    '/assets/Img/merchan/3.png',
+    '/assets/Img/merchan/photo_2025-12-25_14-00-06.jpg',
+    '/assets/Img/merchan/photo_2025-12-25_14-00-21.jpg',
+    '/assets/Img/merchan/photo_2025-12-25_14-00-26.jpg',
+  ];
   const [currentMerchanIndex, setCurrentMerchanIndex] = useState(0);
 
   useEffect(() => {
@@ -45,7 +42,7 @@ const Patrocinios = () => {
           <h2 className="text-fortis-gold font-heading text-2xl md:text-3xl">Aliarte con Fortis significa:</h2>
           <ul>
             <li><span className="text-fortis-gold font-bold">Presencia constante</span> en la Vereda del Lago, uno de los puntos más concurridos de la ciudad.</li>
-            <img src={VeredaImage} alt="Fortis Workout en la Vereda del Lago" className="rounded-lg shadow-lg my-4" />
+            <img src="/assets/Img/Place/photo_2025-12-25_10-43-16.jpg" alt="Fortis Workout en la Vereda del Lago" className="rounded-lg shadow-lg my-4" />
             <li><span className="text-fortis-gold font-bold">Visibilidad en indumentaria y contenido</span>: camisetas, tank tops, shorts, equipo y contenido digital.</li>
             <div className="relative w-full h-80 md:h-[550px] my-6 overflow-hidden rounded-lg shadow-lg">
               {imagesMerchan.map((src, index) => (
@@ -61,7 +58,7 @@ const Patrocinios = () => {
             </div>
             <li>
               <span className="text-fortis-gold font-bold">Asociar tu marca a valores</span> de disciplina, resiliencia, comunidad y conciencia ambiental (la lucha del mochuelo y la protección del parque).
-              <img src={SueloImage} alt="Comunidad Fortis Workout" className="rounded-lg shadow-lg my-4" />
+              <img src="/assets/Img/nosotros/tirados%20al%20suelo.png" alt="Comunidad Fortis Workout" className="rounded-lg shadow-lg my-4" />
             </li>
           </ul>
 

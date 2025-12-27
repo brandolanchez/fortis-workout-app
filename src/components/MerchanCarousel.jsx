@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import img1 from '../../assets/Img/merchan/1.png';
-import img2 from '../../assets/Img/merchan/2.png';
-import img3 from '../../assets/Img/merchan/3.png';
-import img4 from '../../assets/Img/merchan/photo_2025-12-25_14-00-06.jpg';
-import img5 from '../../assets/Img/merchan/photo_2025-12-25_14-00-21.jpg';
-import img6 from '../../assets/Img/merchan/photo_2025-12-25_14-00-26.jpg';
 
 const MerchanCarousel = () => {
-  const images = [img1, img2, img3, img4, img5, img6];
+  const images = [
+    '/assets/Img/merchan/1.png',
+    '/assets/Img/merchan/2.png',
+    '/assets/Img/merchan/3.png',
+    '/assets/Img/merchan/photo_2025-12-25_14-00-06.jpg',
+    '/assets/Img/merchan/photo_2025-12-25_14-00-21.jpg',
+    '/assets/Img/merchan/photo_2025-12-25_14-00-26.jpg',
+  ];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
