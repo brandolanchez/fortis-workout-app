@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../../assets/Img/LOGO-15.png';
+import logo from '../../assets/Img/logo-15.png';
 
 const AnimatedRotator = ({ items = [], className = '' }) => {
   const [index, setIndex] = useState(0);

@@ -33,7 +33,7 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 font-sans transition-colors duration-300 ${navClass}`}>
       <nav className="max-w-6xl mx-auto px-4 flex justify-between items-center">
         <Link to="/">
-          <img src="/assets/Img/LOGO-16.png" alt="Fortis Workout Logo" className="h-24 md:h-36 py-2 transition-all duration-300" />
+          <img src="/assets/Img/logo-16.png" alt="Fortis Workout Logo" className="h-24 md:h-36 py-2 transition-all duration-300" />
         </Link>
 
         {/* Menu */}
