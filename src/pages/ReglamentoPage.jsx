@@ -1,8 +1,3 @@
-import mocheloImage from '../../assets/Img/mochuelo/mandamientos.png';
-import espacioImage from '../../assets/Img/mochuelo/espacio.png';
-import expulsionImage from '../../assets/Img/mochuelo/expulsion.png';
-import aguaImage from '../../assets/Img/mochuelo/agua.png';
-
 const ReglamentoPage = () => {
   return (
     <div className="bg-black text-white min-h-screen font-sans pt-32 pb-12">
@@ -12,7 +7,7 @@ const ReglamentoPage = () => {
         </h1>
         <div className="flex justify-center mb-12">
           <img 
-            src={mocheloImage} 
+            src="/assets/Img/mochuelo/mandamientos.png" 
             alt="Mandamientos Fortis - Mochuelo" 
             className="rounded-lg shadow-lg max-w-md w-full"
           />
@@ -68,7 +63,7 @@ const ReglamentoPage = () => {
 
             <div className="flex justify-center my-8">
               <img
-                src={espacioImage}
+                src="/assets/Img/mochuelo/espacio.png"
                 alt="Espacio Fortis - Mochuelo"
                 className="w-full max-w-lg rounded-lg shadow-lg"
               />
@@ -116,7 +111,7 @@ const ReglamentoPage = () => {
 
             <div className="flex justify-center my-8">
               <img
-                src={aguaImage}
+                src="/assets/Img/mochuelo/agua.png"
                 alt="Hidratación - Mochuelo"
                 className="w-full max-w-md rounded-lg shadow-lg"
               />
@@ -145,7 +140,7 @@ const ReglamentoPage = () => {
 
           <div className="flex justify-center my-8">
             <img
-              src={expulsionImage}
+              src="/assets/Img/mochuelo/expulsion.png"
               alt="Expulsion - Mochuelo"
               className="w-full max-w-md rounded-lg shadow-lg"
             />

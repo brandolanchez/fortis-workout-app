@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../../assets/Img/logo-15.png';
 
 const AnimatedRotator = ({ items = [], className = '' }) => {
   const [index, setIndex] = useState(0);
@@ -90,7 +89,7 @@ const Community = () => {
             </div>
           </div>
           <div className="mt-10 md:mt-0 md:w-1/2">
-            <img src={logo} alt="Fortis Logo" className="w-full max-w-xs mx-auto" />
+            <img src="/assets/Img/logo-15.png" alt="Fortis Logo" className="w-full max-w-xs mx-auto" />
           </div>
         </div>
       </div>
