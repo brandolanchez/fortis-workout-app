@@ -7,8 +7,6 @@ description: "Este 2025 ha sido un año increíble para el crecimiento de nuestr
 
 ### Hola, aquí Brando.
 
----
-
 Este 2025 ha sido un año increíble para el crecimiento de nuestro club. Queremos celebrar que tenemos salud, vida y, sobre todo, las ganas de reventar un 2026 lleno de progreso para la calistenia en nuestra ciudad, Maracaibo.
 
 Por eso, nos reuniremos una vez más antes de que acabe el año para un reto medio loco. Esta es una iniciativa de Jheison y Marcelo, que ya saben que están medio tostados con el entrenamiento, trotar 300 kilómetros para mejorar en resistencia y esa cosas no aptas para nosotros los mortales. 
