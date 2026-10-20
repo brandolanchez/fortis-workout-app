@@ -1,53 +1,41 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import { Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
+import { Pagination, Keyboard, Autoplay } from 'swiper/modules';
 
-const Carousel = () => {
-  return (
-    <div className="bg-black py-16">
-      <Swiper
-        cssMode={true}
-        pagination={{ clickable: true }}
-        mousewheel={true}
-        keyboard={true}
-        modules={[Pagination, Mousewheel, Keyboard, Autoplay]}
-        className="mySwiper"
-        loop={true}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-      >
-        <SwiperSlide>
-          <picture>
-            <source media="(max-width: 768px)" srcSet="/assets/Img/nosotros/20251216_201354.jpg" />
-            <img src="/assets/Img/nosotros/ChatGPT%20Image%2023%20dic%202025,%2018_09_15.png" alt="Slide 1" className="w-full h-[40rem] object-cover object-top" />
-          </picture>
+const slides = [
+  { src: '/assets/Img/nosotros/20251216_175133.webp', alt: 'Miembro de Fortis frente al Lago de Maracaibo con la camiseta del club' },
+  { src: '/assets/Img/nosotros/20251216_175758.webp', alt: 'Atleta en el aire haciendo un movimiento dinámico en las barras' },
+  { src: '/assets/Img/nosotros/20251216_182659.webp', alt: 'Miembros de Fortis sobre las barras de la Vereda del Lago al atardecer' },
+  { src: '/assets/Img/nosotros/20251216_203959.webp', alt: 'Parada de manos de noche en la Vereda del Lago' },
+  { src: '/assets/Img/nosotros/20251216_180228.webp', alt: 'Parada de manos sobre las paralelas del parque' },
+  { src: '/assets/Img/nosotros/20251216_181150.webp', alt: 'Miembros de Fortis en el área de barras al atardecer' },
+];
+
+const Carousel = () => (
+  <div className="rounded-lg overflow-hidden">
+    <Swiper
+      pagination={{ clickable: true }}
+      keyboard={true}
+      modules={[Pagination, Keyboard, Autoplay]}
+      loop={true}
+      autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+    >
+      {slides.map((s, i) => (
+        <SwiperSlide key={s.src}>
+          <img
+            src={s.src}
+            alt={s.alt}
+            width="1600"
+            height="900"
+            loading={i === 0 ? 'eager' : 'lazy'}
+            className="w-full h-[22rem] md:h-[34rem] object-cover"
+          />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src="/assets/Img/nosotros/20251216_175133.jpg" alt="Slide 2" className="w-full h-[40rem] object-cover object-top" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/assets/Img/nosotros/20251216_175758.jpg" alt="Slide 3" className="w-full h-[40rem] object-cover object-top" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/assets/Img/nosotros/20251216_182659.jpg" alt="Slide 4" className="w-full h-[40rem] object-cover object-top" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/assets/Img/nosotros/20251216_203959.jpg" alt="Slide 5" className="w-full h-[40rem] object-cover object-top" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/assets/Img/nosotros/20251216_180228.jpg" alt="Slide 6" className="w-full h-[40rem] object-cover object-top" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/assets/Img/nosotros/20251216_181150.jpg" alt="Slide 7" className="w-full h-[40rem] object-cover object-top" />
-        </SwiperSlide>
-      </Swiper>
-    </div>
-  );
-};
+      ))}
+    </Swiper>
+  </div>
+);
 
 export default Carousel;

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://fortisworkout.org/</loc>
-    <lastmod>2025-12-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://fortisworkout.org/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://fortisworkout.org/patrocinios</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fortisworkout.org/faq</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fortisworkout.org/blog</loc><lastmod>2026-10-20</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fortisworkout.org/blog/eventofindeano</loc><lastmod>2025-12-28</lastmod><priority>0.5</priority></url>
+  <url><loc>https://fortisworkout.org/blog/primera-entrada</loc><lastmod>2025-12-10</lastmod><priority>0.4</priority></url>
+  <url><loc>https://fortisworkout.org/testimonios</loc><lastmod>2026-10-20</lastmod><priority>0.5</priority></url>
+  <url><loc>https://fortisworkout.org/reglamento</loc><lastmod>2026-10-20</lastmod><priority>0.4</priority></url>
+  <url><loc>https://fortisworkout.org/privacy</loc><lastmod>2026-10-20</lastmod><priority>0.2</priority></url>
 </urlset>

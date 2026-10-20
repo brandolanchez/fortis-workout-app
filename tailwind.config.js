@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
+        sans: ['Lato', 'sans-serif'],
         heading: ['"GillSans-Extended"', 'sans-serif'],
       },
       colors: {

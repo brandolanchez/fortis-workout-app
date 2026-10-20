@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import fm from 'front-matter';
 import { useHivePosts } from '../hooks/useHivePosts';
+import { formatDate } from '../utils/date';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 // Importa dinámicamente todos los archivos .md de la carpeta /posts
 const postModules = import.meta.glob('../posts/*.md', { as: 'raw', eager: true });
@@ -19,16 +21,17 @@ const posts = Object.entries(postModules).map(([path, rawContent]) => {
 posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 const BlogPage = () => {
+  usePageTitle('Blog');
   const { posts: hivePosts, loading } = useHivePosts('hive-148971'); // Using the Fortis tag
 
   // Combine and sort posts
   const allPosts = [...posts, ...hivePosts].sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
-    <div className="pt-32 pb-12 bg-black font-sans text-white min-h-screen">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="font-heading text-6xl md:text-7xl text-center mb-12">
-          Nuestro Blog
+    <div className="pt-8 pb-20 bg-black font-sans text-white min-h-screen">
+      <div className="max-w-5xl mx-auto px-4">
+        <h1 className="font-heading text-6xl md:text-7xl mb-12">
+          Blog
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allPosts.map((post) => {
@@ -40,18 +43,18 @@ const BlogPage = () => {
                   </div>
                 )}
                 <h2 className="font-heading text-xl md:text-2xl text-white leading-tight">{post.title}</h2>
-                <p className="text-gray-400 mt-2 text-xs uppercase tracking-wider">
-                  {new Date(post.date).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
-                  {post.author && <span className="text-fortis-gold ml-2">by @{post.author}</span>}
+                <p className="text-stone-400 mt-2 text-sm">
+                  {formatDate(post.date)}
+                  {post.author && <span className="text-fortis-gold ml-2 normal-case">por @{post.author}</span>}
                 </p>
-                <p className="text-gray-300 mt-3 text-sm line-clamp-3">{post.description}</p>
+                <p className="text-stone-300 mt-3 text-sm line-clamp-3">{post.description}</p>
                 <span className="mt-4 inline-block font-bold text-fortis-gold text-sm group-hover:text-white transition-colors">
-                  {post.isHive ? 'Leer en Comunidad' : 'Leer más'} &rarr;
+                  {post.isHive ? 'Leer en la comunidad' : 'Leer más'}
                 </span>
               </>
             );
 
-            const cardClasses = "block bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-fortis-gold transition-all duration-300 group h-full flex flex-col justify-between";
+            const cardClasses = "block bg-stone-900 p-6 rounded-lg border border-stone-800 hover:border-fortis-gold transition-all duration-300 group h-full flex flex-col justify-between";
 
             if (post.isHive) {
               return (
@@ -82,6 +85,9 @@ const BlogPage = () => {
             );
           })}
         </div>
+        {loading && (
+          <p className="text-center text-stone-500 mt-10">Cargando publicaciones de la comunidad…</p>
+        )}
       </div>
     </div>
   );

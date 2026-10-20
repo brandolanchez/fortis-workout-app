@@ -6,21 +6,38 @@
 
 @font-face {
   font-family: 'GillSans-Extended';
-  src: url('../assets/fonts/gill-sans-mt-extended-condensed-bold.ttf') format('truetype');
+  src: url('/assets/fonts/gill-sans-mt-extended-condensed-bold.ttf') format('truetype');
+  font-display: swap;
 }
 
-body {
-  font-family: 'Lato', sans-serif;
-}
-
-/* Ensure the entire app background remains black */
 html, body, #root {
   height: 100%;
 }
 
 body {
-  background-color: #000; /* black background */
-  color: #fff; /* default text color white for better contrast */
+  font-family: 'Lato', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Foco visible al navegar con teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #D99414;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* Que el navbar fijo no tape el inicio de una sección al llegar por ancla (/#ubicacion) */
+section[id] {
+  scroll-margin-top: 6rem;
 }
 
 .swiper-button-next,
@@ -57,4 +74,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
+}
+
+.swiper-pagination-bullet-active {
+    background: #D99414 !important;
 }

@@ -1,87 +1,104 @@
 import { useState, useEffect } from 'react';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp, FaRegClock } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { waLink, WA_MESSAGES, SCHEDULE } from '../config/site';
+
+const VIDEOS = {
+  mobile: { src: '/assets/videos/hero-movil.mp4', poster: '/assets/videos/hero-movil-poster.webp' },
+  desktop: { src: '/assets/videos/hero-desktop.mp4', poster: '/assets/videos/hero-desktop-poster.webp' },
+};
 
 const Hero = () => {
-  const [videoSrc, setVideoSrc] = useState('');
-  const [scaleClass, setScaleClass] = useState('');
+  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
+  const [loadVideo, setLoadVideo] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        // Mobile video
-        setVideoSrc("https://www.youtube.com/embed/x_0STkp-X4M?autoplay=1&mute=1&loop=1&playlist=x_0STkp-X4M&controls=0&showinfo=0&autohide=1");
-        // Scale vertical video to cover horizontal space on mobile
-        setScaleClass('scale-125');
-      } else {
-        // Desktop video
-        setVideoSrc("https://www.youtube.com/embed/qzX7l1HSCUQ?autoplay=1&mute=1&loop=1&playlist=qzX7l1HSCUQ&controls=0&showinfo=0&autohide=1");
-        setScaleClass('scale-150');
-      }
-    };
+    const onResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', onResize);
 
-    handleResize(); // Set initial video on component mount
-    window.addEventListener('resize', handleResize);
+    // El video se carga después de la página, y no se carga si el usuario
+    // tiene activado el ahorro de datos o prefiere menos movimiento.
+    const saveData = navigator.connection?.saveData;
+    const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    let timer;
+    if (!saveData && !reducedMotion) {
+      const start = () => { timer = setTimeout(() => setLoadVideo(true), 300); };
+      if (document.readyState === 'complete') start();
+      else window.addEventListener('load', start, { once: true });
+    }
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', onResize);
+      clearTimeout(timer);
     };
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center text-center p-4 font-sans overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full z-0">
-        {videoSrc && (
-          <iframe
-            className={`w-full h-full ${scaleClass}`}
-            src={videoSrc}
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            title="YouTube video background"
-            style={{
-              width: '100%',
-              height: '100%',
-            }}
-          ></iframe>
+    <section className="relative min-h-[100svh] flex items-end font-sans overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        {/* Primer cuadro del video: se ve mientras carga, o siempre si el usuario ahorra datos o prefiere menos movimiento */}
+        <picture>
+          <source media="(max-width: 767px)" srcSet={VIDEOS.mobile.poster} />
+          <img
+            src={VIDEOS.desktop.poster}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-center md:object-left"
+            fetchpriority="high"
+          />
+        </picture>
+        {loadVideo && (
+          <video
+            key={isMobile ? 'm' : 'd'}
+            className="absolute inset-0 w-full h-full object-cover object-center md:object-left"
+            src={isMobile ? VIDEOS.mobile.src : VIDEOS.desktop.src}
+            poster={isMobile ? VIDEOS.mobile.poster : VIDEOS.desktop.poster}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            tabIndex={-1}
+          />
         )}
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/55 to-black/10 md:bg-gradient-to-r md:from-black/90 md:via-black/60 md:to-black/10" />
+        <div className="absolute inset-x-0 bottom-0 h-32 z-10 bg-gradient-to-t from-black to-transparent" />
       </div>
-      <div className="relative z-20 text-white">
-        <h1 className="text-6xl md:text-8xl tracking-wider font-heading">
-          Fortisworkout
+
+      <div className="relative z-20 w-full max-w-6xl mx-auto px-4 pt-32 pb-14 md:pb-24 text-white">
+        <h1 className="font-heading text-[3.75rem] sm:text-7xl md:text-8xl lg:text-[8.5rem] leading-[0.88] max-w-4xl [text-wrap:balance]">
+          Calistenia en Maracaibo
         </h1>
-        <p className="mt-4 text-lg md:text-4xl text-gray-300 max-w-2xl">
-          Calistenia de alto nivel en Maracaibo
+        <p className="mt-6 text-lg md:text-2xl text-stone-200 max-w-xl leading-snug">
+          Entrenamos en grupo en las barras de la Vereda del Lago: fuerza, técnica y control corporal. Si nunca has hecho una dominada, empiezas desde ahí.
         </p>
-        <p className="mt-3 text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto font-heading">
-          Entrenamientos al aire libre en la Vereda del Lago para gente que no quiere ser promedio, sino rendir más en cuerpo y mente.
-        </p>
-        <a
-          href="https://wa.me/584227144707" // Reemplaza TUNUMERO con el número de contacto de WhatsApp
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 bg-gray-100 text-black font-bold py-4 px-8 rounded-lg text-xl inline-flex items-center gap-3 hover:bg-gray-300 transition-colors duration-300"
-        >
-          <FaWhatsapp size={28} />
-          Quiero entrenar
-        </a>
-        <div className="mt-4">
-          <Link
-            to="/patrocinios"
-            className="inline-block mt-3 bg-fortis-gold text-black font-bold py-3 px-6 rounded-md text-lg hover:opacity-95 transition-opacity duration-200"
-            aria-label="Soy una marca - Patrocinios"
+
+        <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
+          <a
+            href={waLink(WA_MESSAGES.entrenar)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="self-start bg-fortis-gold text-black font-bold py-4 px-8 rounded-md text-xl inline-flex items-center gap-3 hover:brightness-110 transition"
           >
-            Soy una marca
+            <FaWhatsapp size={26} />
+            Quiero entrenar
+          </a>
+          <Link to="/patrocinios" className="text-stone-300 hover:text-white underline underline-offset-4 decoration-stone-500">
+            ¿Tienes una marca? Patrocina a Fortis
           </Link>
         </div>
-        <div className="mt-8">
-          <p className="text-gray-400 text-sm">
-            Cinco años desafiando la gravedad en Maracaibo.
-          </p>
+
+        <div className="mt-10 pt-6 border-t border-white/15 grid gap-3 sm:grid-cols-2 max-w-3xl text-stone-300">
+          <p>5 años entrenando en la Vereda. Todos los niveles.</p>
+          {SCHEDULE && (
+            <p className="flex gap-2">
+              <FaRegClock className="mt-1 shrink-0 text-fortis-gold" aria-hidden="true" />
+              <span>{SCHEDULE}</span>
+            </p>
+          )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

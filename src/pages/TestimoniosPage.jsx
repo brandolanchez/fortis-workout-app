@@ -1,12 +1,9 @@
-import React from 'react';
 import Testimonios from '../components/Testimonios';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 const TestimoniosPage = () => {
-  return (
-    <div className="pt-20">
-      <Testimonios />
-    </div>
-  );
+  usePageTitle('Testimonios');
+  return <Testimonios />;
 };
 
 export default TestimoniosPage;
