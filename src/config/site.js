@@ -3,6 +3,9 @@
 export const WHATSAPP_NUMBER = '584227144707';
 export const WHATSAPP_DISPLAY = '+58 422-7144707';
 
+// Perfil de Empresa en Google (también va en el schema de index.html, en sameAs).
+export const GOOGLE_PROFILE_URL = 'https://share.google/F0zgzUf1Znefi5xKW';
+
 export const waLink = (text) =>
   `https://wa.me/${WHATSAPP_NUMBER}${text ? `?text=${encodeURIComponent(text)}` : ''}`;
 
@@ -15,10 +18,10 @@ export const WA_MESSAGES = {
 };
 
 // Horario de entrenamiento (se muestra en el hero, en Dónde entrenamos y en el FAQ).
-export const SCHEDULE = 'Mañanas de 7:00 a 10:00 a. m. y tardes de 6:00 a 10:00 p. m.';
+export const SCHEDULE = 'Lunes a sábado, de 7:00 a 10:00 a. m. y de 6:00 a 10:00 p. m.';
 
 // Nota adicional (no sale en el hero). Vacío = no se muestra.
-export const SCHEDULE_NOTE = 'Sábados: sesiones a convenir según tu agenda.';
+export const SCHEDULE_NOTE = 'Tú eliges qué días y en qué turno entrenar, según tu agenda.';
 
 // Respuesta de precio en el FAQ.
 export const PRICING = '$35 al mes por tres sesiones semanales. El pago es mensual. Escríbenos por WhatsApp si tienes dudas sobre el plan.';

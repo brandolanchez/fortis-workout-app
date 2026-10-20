@@ -1,6 +1,6 @@
-import { FaWhatsapp, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaYoutube, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { waLink, WA_MESSAGES, WHATSAPP_DISPLAY } from '../config/site';
+import { waLink, WA_MESSAGES, WHATSAPP_DISPLAY, GOOGLE_PROFILE_URL } from '../config/site';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -9,6 +9,7 @@ const Footer = () => {
     { icon: <FaInstagram />, href: 'https://www.instagram.com/fortisworkout/', label: 'Instagram' },
     { icon: <FaYoutube />, href: 'https://www.youtube.com/@fortisworkout', label: 'YouTube' },
     { icon: <FaWhatsapp />, href: waLink(), label: 'WhatsApp' },
+    { icon: <FaGoogle />, href: GOOGLE_PROFILE_URL, label: 'Fortis Workout en Google' },
   ];
 
   return (
