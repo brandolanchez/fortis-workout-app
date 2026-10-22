@@ -3,14 +3,15 @@ title: "Calistenia vs. CrossFit en Maracaibo: cuál va mejor con tu vida y tu bo
 seoTitle: "Calistenia vs CrossFit en Maracaibo: cuál te conviene"
 description: "Comparamos CrossFit y calistenia en Maracaibo: costo, intensidad, riesgo de lesión y resultados. Decide con datos antes de pagar una mensualidad."
 date: "2026-10-10"
-image: "/assets/Img/nosotros/20251216_175758.webp"
-imageAlt: "Atleta de Fortis haciendo un movimiento dinámico en las barras de la Vereda del Lago"
+image: "/assets/Img/Place/photo_2025-12-25_10-43-16.webp"
+imageAlt: "Área de barras del Parque Vereda del Lago, donde entrena Fortis Workout, frente al Lago de Maracaibo"
 keywords:
   - calistenia vs crossfit
   - crossfit maracaibo
   - entrenamiento de alta intensidad maracaibo
   - calistenia vs crossfit vs gym
   - entrenamiento de resistencia con calistenia
+  - crossfit vereda del lago
 faq:
   - q: "¿La calistenia es más fácil que el CrossFit?"
     a: "No. La calistenia puede ser igual de exigente. La diferencia es que la intensidad la controlas tú con la progresión del ejercicio, no agregando peso a la barra."
@@ -67,7 +68,7 @@ En la calistenia al aire libre el espacio es público. Lo que pagas es la guía,
 
 ## Lo que sí ofrecemos: entrenamiento de resistencia con calistenia
 
-Si lo que te gusta del CrossFit es terminar sin aire, la calistenia también tiene eso. En Fortis trabajamos la resistencia con tu propio peso:
+Si buscabas CrossFit en la Vereda del Lago, lo que vas a encontrar en las barras es esto. Si lo que te gusta del CrossFit es terminar sin aire, la calistenia también tiene eso. En Fortis trabajamos la resistencia con tu propio peso:
 
 - **Circuitos por tiempo:** dominadas, fondos, flexiones y sentadillas en rondas, con descansos cortos.
 - **Series al máximo de repeticiones** para medir tu progreso de una semana a otra.

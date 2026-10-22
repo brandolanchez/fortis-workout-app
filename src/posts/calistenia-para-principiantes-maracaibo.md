@@ -10,6 +10,9 @@ keywords:
   - calistenia principiantes maracaibo
   - calistenia para mujeres principiantes
   - rutina con peso corporal para principiantes
+  - aprender dominadas desde cero
+  - barras vereda del lago
+  - fortis workout maracaibo
 faq:
   - q: "¿Puedo empezar calistenia si tengo sobrepeso o nunca he entrenado?"
     a: "Sí. Todos los ejercicios tienen versiones más fáciles. Empiezas con apoyos y ángulos que puedas controlar y subes la dificultad poco a poco."
@@ -21,7 +24,7 @@ faq:
 
 "Yo no puedo hacer calistenia, no hago ni una dominada." Es lo que más escuchamos en la Vereda. Y es justo al revés: la calistenia está hecha para llevarte desde cero hasta esa primera dominada, paso a paso.
 
-Si nunca has entrenado, o si hace años que no haces ejercicio, esta guía es para ti.
+Si nunca has entrenado, o si hace años que no haces ejercicio, esta guía es para ti. Es el mismo camino que siguen quienes empiezan con Fortis Workout en Maracaibo, en las barras de la Vereda del Lago.
 
 ## Por qué la calistenia es buena opción si estás empezando
 
@@ -40,7 +43,7 @@ Si nunca has entrenado, o si hace años que no haces ejercicio, esta guía es pa
 | Colgarse de la barra | Agarre y hombros | Pies apoyados en el suelo | Colgado completo, hombros activos |
 | Plancha | Abdomen y tronco | Sobre rodillas | Plancha completa, luego plancha lateral |
 
-## Cómo llegar a tu primera dominada
+## Aprender dominadas desde cero: el camino a tu primera dominada
 
 La dominada es la meta de casi todos los que empiezan. Estas son las etapas que seguimos en Fortis:
 
@@ -74,6 +77,15 @@ Tres sesiones por semana, con un día de descanso entre cada una.
 - Plancha: 3 × 30 segundos
 
 Descansa entre 60 y 90 segundos entre series. Si una semana se te hace muy fácil, avanza. Si se te hace imposible, quédate una semana más.
+
+## Después de la primera dominada: estáticos y handstand
+
+Cuando ya tienes 5 a 8 dominadas limpias y 15 flexiones seguidas, empieza lo divertido. El siguiente nivel en las barras de la Vereda del Lago se divide en dos caminos:
+
+- **Más fuerza en barra:** dominadas con pausa, dominadas lastradas y, más adelante, el muscle up.
+- **Estáticos:** posiciones que se sostienen, como la parada de manos (handstand), el L-sit, el front lever y la plancha.
+
+Los estáticos piden paciencia y mucha técnica, pero se aprenden con progresiones igual que la dominada. Lo explicamos paso a paso en nuestra [guía de parada de manos y estáticos](/blog/parada-de-manos-y-estaticos-maracaibo).
 
 ## Calistenia para mujeres principiantes
 

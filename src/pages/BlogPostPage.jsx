@@ -6,6 +6,8 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { formatDate } from '../utils/date';
 import { posts, getPost } from '../utils/posts';
 import { applySeo } from '../hooks/usePageTitle';
+import ShareBar from '../components/ShareBar';
+import { canonicalFor } from '../config/seo';
 import { waLink, WA_MESSAGES, SCHEDULE } from '../config/site';
 
 // Enlaces internos (/faq, /blog/...) navegan dentro del sitio; los externos abren en otra pestaña.
@@ -39,6 +41,34 @@ const markdownComponents = {
   hr: () => <hr className="my-12 border-stone-800" />,
 };
 
+// Divide el texto antes del subtítulo (##) más cercano a la mitad,
+// para insertar ahí un llamado a la acción intermedio.
+const splitForMidCta = (body) => {
+  const positions = [...body.matchAll(/\n## /g)].map((m) => m.index);
+  if (positions.length < 3) return [body, ''];
+  const middle = body.length / 2;
+  const candidates = positions.slice(1, -1);
+  const cut = candidates.reduce((best, pos) => (Math.abs(pos - middle) < Math.abs(best - middle) ? pos : best), candidates[0]);
+  return [body.slice(0, cut), body.slice(cut)];
+};
+
+const MidCta = () => (
+  <aside className="my-10 rounded-lg border border-fortis-gold/60 bg-stone-900 p-6">
+    <p className="font-heading text-2xl text-white">¿Prefieres aprenderlo entrenando?</p>
+    <p className="mt-2 text-lg">
+      Entrenamos en grupo en las barras de la Vereda del Lago, de lunes a sábado. $35 al mes por tres sesiones a la semana.
+    </p>
+    <a
+      href={waLink(WA_MESSAGES.entrenar)}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-4 inline-flex items-center gap-2 font-bold text-fortis-gold underline underline-offset-4 hover:text-white"
+    >
+      <FaWhatsapp size={18} /> Consultar por WhatsApp
+    </a>
+  </aside>
+);
+
 const BlogPostPage = () => {
   const { slug } = useParams();
   const post = getPost(slug);
@@ -68,6 +98,7 @@ const BlogPostPage = () => {
   }
 
   const related = posts.filter((p) => p.slug !== slug).slice(0, 3);
+  const [firstHalf, secondHalf] = splitForMidCta(post.body);
 
   return (
     <div className="pt-8 pb-20 bg-black font-sans text-stone-300">
@@ -89,8 +120,16 @@ const BlogPostPage = () => {
         </header>
 
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
-          {post.body}
+          {firstHalf}
         </ReactMarkdown>
+        {secondHalf && (
+          <>
+            <MidCta />
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+              {secondHalf}
+            </ReactMarkdown>
+          </>
+        )}
 
         {Array.isArray(post.faq) && post.faq.length > 0 && (
           <section className="mt-14">
@@ -105,6 +144,13 @@ const BlogPostPage = () => {
             </dl>
           </section>
         )}
+
+        <ShareBar
+          title={post.title}
+          description={post.description}
+          image={post.image}
+          url={canonicalFor(`/blog/${slug}`)}
+        />
 
         <aside className="mt-14 rounded-lg bg-fortis-gold text-black p-6 md:p-8">
           <p className="font-heading text-3xl md:text-4xl leading-tight">Entrena con nosotros en la Vereda del Lago</p>

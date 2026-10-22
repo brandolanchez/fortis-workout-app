@@ -3,13 +3,14 @@ title: "Entrenamiento funcional en Maracaibo: por qué empezar por dominar tu pr
 seoTitle: "Entrenamiento funcional en Maracaibo con calistenia"
 description: "Qué es el entrenamiento funcional, en qué se parece a la calistenia y por qué tu propio peso es la mejor base. Entrena funcional en la Vereda del Lago."
 date: "2026-09-30"
-image: "/assets/Img/nosotros/20251216_180228.webp"
-imageAlt: "Parada de manos sobre las paralelas del Parque Vereda del Lago"
+image: "/assets/Img/nosotros/20251216_175758.webp"
+imageAlt: "Atleta de Fortis haciendo un movimiento dinámico en las barras de la Vereda del Lago"
 keywords:
   - entrenamiento funcional maracaibo
   - clases de funcional maracaibo
   - funcional al aire libre vereda del lago
   - entrenamiento funcional y calistenia
+  - preparación hyrox con calistenia
 faq:
   - q: "¿La calistenia es entrenamiento funcional?"
     a: "Sí. Trabaja patrones de movimiento completos como empujar, tirar, agacharse y estabilizar el tronco, que es justo lo que define al entrenamiento funcional."
@@ -73,6 +74,19 @@ Una sesión típica en Fortis tiene esta estructura:
 5. **Vuelta a la calma:** estiramientos y respiración.
 
 Nadie hace el mismo ejercicio que el de al lado si no le corresponde. Si recién empiezas, haces remo australiano mientras otro hace dominadas lastradas, y los dos están entrenando lo mismo.
+
+## Hyrox y otras pruebas de resistencia: cómo te prepara la calistenia
+
+El Hyrox se volvió popular en todo el mundo: una carrera de 8 km dividida en tramos de 1 km, con una estación de ejercicio funcional después de cada tramo. Combina resistencia, fuerza y capacidad de seguir moviéndote cansado.
+
+En Fortis no damos clases de Hyrox, pero la calistenia es una base muy útil si quieres prepararte para ese tipo de pruebas:
+
+- **Piernas a una pierna y zancadas** para aguantar las estaciones de pierna.
+- **Core y agarre** de colgarte en la barra, que se usan en casi todas las estaciones.
+- **Circuitos por tiempo** con dominadas, fondos y sentadillas para trabajar el cansancio acumulado.
+- **Trote en la Vereda** antes o después de la sesión para sumar la parte de carrera.
+
+Si corres, también te puede servir nuestra guía de [calistenia para corredores](/blog/calistenia-para-corredores-maracaibo).
 
 ## ¿Funcional en gimnasio o funcional al aire libre?
 
