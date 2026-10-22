@@ -100,15 +100,23 @@ const ShareBar = ({ title, description, image, url }) => {
   const storyUrl = `${url}?utm_source=instagram&utm_medium=story`;
   const storyBlob = useRef(null);
 
-  // La imagen se prepara apenas carga el artículo, para que al tocar el botón
-  // el menú de compartir se abra al instante (iPhone lo exige).
+  const section = useRef(null);
+
+  // La imagen se prepara cuando la sección de compartir aparece en pantalla,
+  // para que al tocar el botón el menú se abra al instante (iPhone lo exige)
+  // sin competir con la carga inicial del artículo.
   useEffect(() => {
     let cancelled = false;
-    const t = setTimeout(async () => {
+    const el = section.current;
+    if (!el || !('IntersectionObserver' in window)) return undefined;
+    const io = new IntersectionObserver(async (entries) => {
+      if (!entries.some((e) => e.isIntersecting)) return;
+      io.disconnect();
       const blob = await buildStoryImage({ title, image });
       if (!cancelled) storyBlob.current = blob;
-    }, 800);
-    return () => { cancelled = true; clearTimeout(t); };
+    }, { rootMargin: '600px' });
+    io.observe(el);
+    return () => { cancelled = true; io.disconnect(); };
   }, [title, image]);
 
   const flash = (msg) => {
@@ -165,7 +173,7 @@ const ShareBar = ({ title, description, image, url }) => {
   const btn = 'inline-flex items-center gap-2 rounded-md border border-stone-700 px-4 py-3 font-bold text-white hover:border-fortis-gold hover:text-fortis-gold transition-colors';
 
   return (
-    <section className="mt-14" aria-label="Compartir artículo">
+    <section ref={section} className="mt-14" aria-label="Compartir artículo">
       <h2 className="font-heading text-3xl text-white">Comparte este artículo</h2>
       <p className="mt-2 text-stone-400">Si le sirve a alguien que conoces, mándaselo o súbelo a tu historia.</p>
       <div className="mt-5 flex flex-wrap gap-3">

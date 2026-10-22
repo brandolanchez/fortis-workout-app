@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <nav className="max-w-6xl mx-auto px-4 h-20 md:h-24 flex justify-between items-center">
         <Link to="/" aria-label="Fortis Workout, inicio">
-          <img src="/assets/Img/logo-16.webp" alt="Fortis Workout" width="400" height="400" className="h-16 md:h-20 w-auto" />
+          <img src="/assets/Img/logo-16-160.webp" alt="Fortis Workout" width="160" height="160" className="h-16 md:h-20 w-auto" />
         </Link>
 
         <ul className="flex items-center gap-4 sm:gap-6 md:gap-8">

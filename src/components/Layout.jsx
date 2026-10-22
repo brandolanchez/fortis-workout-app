@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 import Navbar from './Navbar';
@@ -12,7 +13,9 @@ const Layout = () => {
     <>
       <Navbar />
       <main className={isHomePage ? '' : 'pt-24 md:pt-28'}>
-        <Outlet />
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
 

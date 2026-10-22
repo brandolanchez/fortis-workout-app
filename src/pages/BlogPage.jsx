@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { responsive } from '../utils/img';
 import { posts } from '../utils/posts';
 import { useHivePosts } from '../hooks/useHivePosts';
 import { formatDate } from '../utils/date';
@@ -24,7 +25,7 @@ const BlogPage = () => {
               <>
                 {post.image && (
                   <div className="mb-4 overflow-hidden rounded-md h-48">
-                    <img src={post.image} alt={post.imageAlt || ""} loading="lazy" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <img {...responsive(post.image, '(max-width: 768px) 100vw, 33vw')} alt={post.imageAlt || ""} width="1600" height="900" loading="lazy" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                   </div>
                 )}
                 <h2 className="font-heading text-xl md:text-2xl text-white leading-tight">{post.title}</h2>

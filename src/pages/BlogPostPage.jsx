@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { responsive } from '../utils/img';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -111,7 +112,7 @@ const BlogPostPage = () => {
           </p>
           {post.image && (
             <img
-              src={post.image}
+              {...responsive(post.image, '(max-width: 768px) 100vw, 768px')}
               alt={post.imageAlt || ''}
               className="mt-8 w-full h-64 md:h-96 object-cover rounded-lg"
               fetchpriority="high"

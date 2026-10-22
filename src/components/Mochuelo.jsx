@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { responsive } from '../utils/img';
 
 const images = [
   { src: '/assets/Img/mochuelo/mochuelo-real.webp', alt: 'Mochuelo de hoyo en la Vereda del Lago', position: 'object-center' },
@@ -35,7 +36,7 @@ const Mochuelo = () => {
           {images.map((img, index) => (
             <img
               key={img.src}
-              src={img.src}
+              {...responsive(img.src, '(max-width: 768px) 100vw, 50vw')}
               alt={img.alt}
               loading="lazy"
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${img.position} ${

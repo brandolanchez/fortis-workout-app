@@ -1,0 +1,15 @@
+# Archivos generados por Vite (llevan un código en el nombre y nunca cambian): caché de 1 año
+/assets/*.js
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imágenes, videos y fuentes del sitio: caché de 30 días
+/assets/Img/*
+  Cache-Control: public, max-age=2592000
+/assets/videos/*
+  Cache-Control: public, max-age=2592000
+/assets/fonts/*
+  Cache-Control: public, max-age=2592000

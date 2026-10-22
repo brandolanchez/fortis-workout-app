@@ -22,7 +22,13 @@ const Hero = () => {
     const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     let timer;
     if (!saveData && !reducedMotion) {
-      const start = () => { timer = setTimeout(() => setLoadVideo(true), 300); };
+      // Espera a que el navegador esté libre para no competir con la carga inicial.
+      const start = () => {
+        timer = setTimeout(() => {
+          if ('requestIdleCallback' in window) window.requestIdleCallback(() => setLoadVideo(true), { timeout: 3000 });
+          else setLoadVideo(true);
+        }, 1500);
+      };
       if (document.readyState === 'complete') start();
       else window.addEventListener('load', start, { once: true });
     }
