@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import fm from 'front-matter';
-import { SEO, SITE_URL, SITE_NAME, canonicalFor } from '../src/config/seo.js';
+import { SEO, SITE_URL, SITE_NAME, OG_IMAGE, canonicalFor } from '../src/config/seo.js';
 import { faqs } from '../src/config/faq.js';
 
 const DIST = path.resolve('dist');
@@ -22,7 +22,7 @@ const setTag = (html, regex, replacement) => {
   return html.replace(regex, replacement);
 };
 
-const render = ({ route, title, description, jsonLd, noscript, type = 'website' }) => {
+const render = ({ route, title, description, jsonLd, noscript, image, type = 'website' }) => {
   const url = canonicalFor(route);
   let html = template;
   html = setTag(html, /<title>[\s\S]*?<\/title>/, `<title>${esc(title)}</title>`);
@@ -32,6 +32,8 @@ const render = ({ route, title, description, jsonLd, noscript, type = 'website' 
   html = setTag(html, /<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(title)}">`);
   html = setTag(html, /<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(description)}">`);
   html = setTag(html, /<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${url}">`);
+  if (image) html = setTag(html, /<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${image}">`);
+  if (image) html = html.replace(/\s*<meta property="og:image:(width|height)" content="\d+">/g, '');
   if (jsonLd) {
     html = html.replace(
       '<!--structured-data-->',
@@ -79,20 +81,31 @@ for (const file of fs.readdirSync(POSTS).filter((f) => f.endsWith('.md'))) {
   const slug = file.replace(/\.md$/, '');
   const { attributes: a } = fm(fs.readFileSync(path.join(POSTS, file), 'utf8'));
   const route = `/blog/${slug}`;
-  const title = `${a.title} | ${SITE_NAME}`;
+  const title = a.seoTitle || `${a.title} | ${SITE_NAME}`;
   const description = a.description || SEO['/blog'].description;
-  const jsonLd = {
-    '@context': 'https://schema.org',
+  const image = a.image ? `${SITE_URL}${a.image}` : OG_IMAGE;
+  const article = {
     '@type': 'BlogPosting',
     headline: a.title,
     description,
+    image,
     datePublished: a.date,
+    dateModified: a.updated || a.date,
     inLanguage: 'es-VE',
+    keywords: Array.isArray(a.keywords) ? a.keywords.join(', ') : undefined,
     mainEntityOfPage: canonicalFor(route),
     author: { '@type': 'Organization', name: SITE_NAME, url: `${SITE_URL}/` },
     publisher: { '@id': `${SITE_URL}/#club` },
   };
-  write(route, render({ route, title, description, jsonLd, type: 'article', noscript: noscriptFor(a.title, description) }));
+  const graph = [article];
+  if (Array.isArray(a.faq) && a.faq.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      mainEntity: a.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    });
+  }
+  const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
+  write(route, render({ route, title, description, image, jsonLd, type: 'article', noscript: noscriptFor(a.title, description) }));
   sitemap.push({ loc: canonicalFor(route), lastmod: String(a.date || today).slice(0, 10), priority: '0.5' });
 }
 

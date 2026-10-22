@@ -1,91 +1,143 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import fm from 'front-matter';
+import remarkGfm from 'remark-gfm';
+import { FaWhatsapp } from 'react-icons/fa';
 import { formatDate } from '../utils/date';
+import { posts, getPost } from '../utils/posts';
 import { applySeo } from '../hooks/usePageTitle';
+import { waLink, WA_MESSAGES, SCHEDULE } from '../config/site';
 
-// Define cómo se verán los elementos HTML generados por Markdown
+// Enlaces internos (/faq, /blog/...) navegan dentro del sitio; los externos abren en otra pestaña.
+const SmartLink = ({ href = '', children, ...props }) => {
+  const cls = 'text-fortis-gold underline underline-offset-4 hover:text-white';
+  if (href.startsWith('/')) return <Link to={href} className={cls}>{children}</Link>;
+  return <a href={href} target="_blank" rel="noopener noreferrer" className={cls} {...props}>{children}</a>;
+};
+
 const markdownComponents = {
   // El título del post ya es el H1 de la página; un "#" dentro del Markdown se muestra como H2.
-  h1: ({ ...props }) => <h2 className="font-heading text-4xl md:text-5xl mt-8 mb-6" {...props} />,
-  h2: ({ ...props }) => <h2 className="font-heading text-3xl md:text-4xl mt-6 mb-4" {...props} />,
-  h3: ({ ...props }) => <h3 className="font-heading text-2xl md:text-3xl mt-4 mb-2" {...props} />,
+  h1: ({ ...props }) => <h2 className="font-heading text-4xl md:text-5xl text-white mt-12 mb-5" {...props} />,
+  h2: ({ ...props }) => <h2 className="font-heading text-3xl md:text-4xl text-white mt-12 mb-4 leading-tight" {...props} />,
+  h3: ({ ...props }) => <h3 className="font-heading text-2xl md:text-3xl text-white mt-8 mb-3 leading-tight" {...props} />,
   p: ({ ...props }) => <p className="mb-6 leading-relaxed text-lg" {...props} />,
-  ul: ({ ...props }) => <ul className="list-disc list-inside mb-6 pl-4 space-y-2" {...props} />,
-  li: ({ ...props }) => <li className="leading-relaxed" {...props} />,
+  ul: ({ ...props }) => <ul className="list-disc pl-6 mb-6 space-y-2 text-lg marker:text-fortis-gold" {...props} />,
+  ol: ({ ...props }) => <ol className="list-decimal pl-6 mb-6 space-y-2 text-lg marker:text-fortis-gold" {...props} />,
+  li: ({ ...props }) => <li className="leading-relaxed pl-1" {...props} />,
   strong: ({ ...props }) => <strong className="font-bold text-white" {...props} />,
+  a: SmartLink,
+  blockquote: ({ ...props }) => <blockquote className="border-l-4 border-fortis-gold pl-5 my-8 text-xl text-stone-200" {...props} />,
+  table: ({ ...props }) => (
+    <div className="my-8 overflow-x-auto rounded-lg border border-stone-800">
+      <table className="w-full min-w-[36rem] text-left text-base" {...props} />
+    </div>
+  ),
+  thead: ({ ...props }) => <thead className="bg-stone-900 text-white" {...props} />,
+  th: ({ ...props }) => <th className="px-4 py-3 font-bold align-bottom" {...props} />,
+  td: ({ ...props }) => <td className="px-4 py-3 border-t border-stone-800 align-top" {...props} />,
   img: ({ alt, ...props }) => <img alt={alt || ''} loading="lazy" className="w-full h-auto rounded-lg my-8" {...props} />,
+  hr: () => <hr className="my-12 border-stone-800" />,
 };
 
 const BlogPostPage = () => {
-  const { slug } = useParams(); // Obtiene el 'slug' de la URL (ej. "primera-entrada")
-  const [post, setPost] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
+  const { slug } = useParams();
+  const post = getPost(slug);
 
   useEffect(() => {
-    const fetchPost = async () => {
-      try {
-        setIsLoading(true);
-        // Importa el archivo .md específico basado en el slug de la URL
-        const rawContent = await import(`../posts/${slug}.md?raw`);
-        const { attributes, body } = fm(rawContent.default);
-        setPost({ data: attributes, content: body });
-        applySeo({
-          title: `${attributes.title} | Fortis Workout`,
-          description: attributes.description,
-          path: `/blog/${slug}`,
-        });
-      } catch (err) {
-        setHasError(true);
-        applySeo({ title: 'Post no encontrado | Fortis Workout', noindex: true });
-      } finally {
-        setIsLoading(false);
-      }
-    };
+    if (post) {
+      applySeo({
+        title: `${post.seoTitle || post.title}${post.seoTitle ? '' : ' | Fortis Workout'}`,
+        description: post.description,
+        path: `/blog/${slug}`,
+      });
+    } else {
+      applySeo({ title: 'Post no encontrado | Fortis Workout', noindex: true });
+    }
+  }, [post, slug]);
 
-    fetchPost();
-  }, [slug]);
-
-  if (isLoading) {
-    return <div className="pt-16 min-h-[60vh] text-center text-stone-400 font-sans text-xl">Cargando…</div>;
-  }
-
-  if (hasError || !post) {
+  if (!post) {
     return (
       <div className="pt-16 text-center text-white font-sans min-h-[70vh] px-4">
         <h1 className="text-5xl font-heading">Este post no existe</h1>
         <p className="mt-4 text-lg text-stone-400">Puede que el enlace esté mal escrito o que el post se haya movido.</p>
         <Link to="/blog" className="mt-8 inline-block bg-fortis-gold text-black font-bold py-3 px-6 rounded-lg">
-          Volver al Blog
+          Volver al blog
         </Link>
       </div>
     );
   }
 
+  const related = posts.filter((p) => p.slug !== slug).slice(0, 3);
+
   return (
     <div className="pt-8 pb-20 bg-black font-sans text-stone-300">
-      <div className="max-w-3xl mx-auto px-4">
-        <header className="text-center mb-12">
-          <h1 className="font-heading text-5xl md:text-6xl text-white">{post.data.title}</h1>
+      <article className="max-w-3xl mx-auto px-4">
+        <header className="mb-10">
+          <Link to="/blog" className="text-stone-400 hover:text-white text-sm">Blog</Link>
+          <h1 className="mt-3 font-heading text-5xl md:text-6xl text-white leading-[0.95]">{post.title}</h1>
           <p className="text-stone-400 mt-4 text-sm">
-            {formatDate(post.data.date)}
+            {formatDate(post.date)} · {post.readingMinutes} min de lectura
           </p>
+          {post.image && (
+            <img
+              src={post.image}
+              alt={post.imageAlt || ''}
+              className="mt-8 w-full h-64 md:h-96 object-cover rounded-lg"
+              fetchpriority="high"
+            />
+          )}
         </header>
 
-        <article>
-          <ReactMarkdown components={markdownComponents}>
-            {post.content}
-          </ReactMarkdown>
-        </article>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+          {post.body}
+        </ReactMarkdown>
 
-        <div className="text-center mt-16 border-t border-stone-800 pt-8">
-          <Link to="/blog" className="font-bold text-lg text-white hover:text-stone-400 transition-colors">
-            Volver al blog
-          </Link>
-        </div>
-      </div>
+        {Array.isArray(post.faq) && post.faq.length > 0 && (
+          <section className="mt-14">
+            <h2 className="font-heading text-3xl md:text-4xl text-white mb-4">Preguntas frecuentes</h2>
+            <dl className="divide-y divide-stone-800 border-y border-stone-800">
+              {post.faq.map((f) => (
+                <div key={f.q} className="py-5">
+                  <dt className="font-heading text-2xl text-white">{f.q}</dt>
+                  <dd className="mt-2 text-lg leading-relaxed">{f.a}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
+
+        <aside className="mt-14 rounded-lg bg-fortis-gold text-black p-6 md:p-8">
+          <p className="font-heading text-3xl md:text-4xl leading-tight">Entrena con nosotros en la Vereda del Lago</p>
+          <p className="mt-3 text-lg">
+            Barras del Parque Vereda del Lago, diagonal a las gradas. {SCHEDULE}
+          </p>
+          <a
+            href={waLink(WA_MESSAGES.entrenar)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-3 bg-black text-white font-bold py-3 px-6 rounded-md hover:bg-stone-800"
+          >
+            <FaWhatsapp size={22} />
+            Quiero entrenar
+          </a>
+        </aside>
+      </article>
+
+      {related.length > 0 && (
+        <nav className="max-w-3xl mx-auto px-4 mt-16" aria-label="Más artículos">
+          <h2 className="font-heading text-3xl text-white mb-6">Sigue leyendo</h2>
+          <ul className="divide-y divide-stone-800 border-y border-stone-800">
+            {related.map((p) => (
+              <li key={p.slug}>
+                <Link to={`/blog/${p.slug}`} className="block py-4 group">
+                  <span className="font-heading text-2xl text-white group-hover:text-fortis-gold">{p.title}</span>
+                  {p.description && <span className="block mt-1 text-stone-400 line-clamp-2">{p.description}</span>}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </div>
   );
 };

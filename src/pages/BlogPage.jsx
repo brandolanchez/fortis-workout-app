@@ -1,24 +1,8 @@
 import { Link } from 'react-router-dom';
-import fm from 'front-matter';
+import { posts } from '../utils/posts';
 import { useHivePosts } from '../hooks/useHivePosts';
 import { formatDate } from '../utils/date';
 import { usePageTitle } from '../hooks/usePageTitle';
-
-// Importa dinámicamente todos los archivos .md de la carpeta /posts
-const postModules = import.meta.glob('../posts/*.md', { as: 'raw', eager: true });
-
-// Procesa cada archivo para extraer sus metadatos (título, fecha, etc.) y el 'slug' (URL)
-const posts = Object.entries(postModules).map(([path, rawContent]) => {
-  const { attributes } = fm(rawContent);
-  const slug = path.split('/').pop().replace('.md', '');
-  return {
-    ...attributes,
-    slug,
-  };
-});
-
-// Ordena los posts por fecha, del más nuevo al más viejo
-posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 const BlogPage = () => {
   usePageTitle('Blog');
@@ -30,16 +14,17 @@ const BlogPage = () => {
   return (
     <div className="pt-8 pb-20 bg-black font-sans text-white min-h-screen">
       <div className="max-w-5xl mx-auto px-4">
-        <h1 className="font-heading text-6xl md:text-7xl mb-12">
-          Blog
-        </h1>
+        <h1 className="font-heading text-6xl md:text-7xl">Blog</h1>
+        <p className="mt-3 mb-12 text-lg text-stone-400 max-w-2xl">
+          Calistenia, entrenamiento al aire libre y la vida de la comunidad Fortis en la Vereda del Lago, Maracaibo.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allPosts.map((post) => {
             const CardContent = () => (
               <>
                 {post.image && (
                   <div className="mb-4 overflow-hidden rounded-md h-48">
-                    <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <img src={post.image} alt={post.imageAlt || ""} loading="lazy" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                   </div>
                 )}
                 <h2 className="font-heading text-xl md:text-2xl text-white leading-tight">{post.title}</h2>
