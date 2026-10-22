@@ -119,7 +119,7 @@ const Patrocinios = () => {
           >
             Quiero patrocinar a Fortis
           </a>
-          <p className="text-sm text-stone-500 mt-3">Te atenderemos por WhatsApp.</p>
+          <p className="text-sm text-stone-400 mt-3">Te atenderemos por WhatsApp.</p>
         </div>
       </div>
     </section>

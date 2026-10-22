@@ -69,7 +69,7 @@ const PrivacyPolicy = () => {
         <h2 className="font-heading text-2xl md:text-3xl mt-6 mb-3">10. <span className="text-fortis-gold font-bold">Cambios en esta política</span></h2>
         <p className="text-stone-300 mb-4">Podemos actualizar esta <span className="text-fortis-gold font-bold">Política de Privacidad</span> para reflejar cambios en el sitio, servicios o requisitos legales. La fecha de la última actualización se indicará al final del documento, y el uso continuo del sitio después de cualquier modificación implica la aceptación de la versión vigente.</p>
 
-        <p className="text-stone-500 text-sm mt-12">Última actualización: 2025.</p>
+        <p className="text-stone-400 text-sm mt-12">Última actualización: 2025.</p>
       </div>
     </section>
   );

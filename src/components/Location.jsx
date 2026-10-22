@@ -12,32 +12,32 @@ const Location = () => {
         <div className="mt-10 grid gap-10 md:grid-cols-2 md:gap-12 md:items-start">
           <div>
             <dl className="divide-y divide-stone-800 border-y border-stone-800">
-              <div className="flex gap-4 py-5">
-                <FaMapMarkerAlt className="mt-1 shrink-0 text-fortis-gold" size={20} aria-hidden="true" />
-                <div>
-                  <dt className="font-heading text-2xl">Lugar</dt>
-                  <dd className="mt-1 text-lg text-stone-300">Barras del Parque Vereda del Lago, diagonal a las gradas.</dd>
-                </div>
+              <div className="py-5">
+                <dt className="flex items-center gap-3 font-heading text-2xl">
+                  <FaMapMarkerAlt className="shrink-0 text-fortis-gold" size={20} aria-hidden="true" />
+                  Lugar
+                </dt>
+                <dd className="mt-1 pl-8 text-lg text-stone-300">Barras del Parque Vereda del Lago, diagonal a las gradas.</dd>
               </div>
-              <div className="flex gap-4 py-5">
-                <FaRegClock className="mt-1 shrink-0 text-fortis-gold" size={20} aria-hidden="true" />
-                <div>
-                  <dt className="font-heading text-2xl">Horario</dt>
-                  <dd className="mt-1 text-lg text-stone-300">
-                    {SCHEDULE || 'Escríbenos y te enviamos los horarios de esta semana.'}
-                  </dd>
-                  {SCHEDULE_NOTE && <dd className="mt-1 text-stone-400">{SCHEDULE_NOTE}</dd>}
-                  <dd className="mt-2">
-                    <a
-                      href={waLink(WA_MESSAGES.precios)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-fortis-gold underline underline-offset-4 hover:text-white"
-                    >
-                      Consulta precios por WhatsApp
-                    </a>
-                  </dd>
-                </div>
+              <div className="py-5">
+                <dt className="flex items-center gap-3 font-heading text-2xl">
+                  <FaRegClock className="shrink-0 text-fortis-gold" size={20} aria-hidden="true" />
+                  Horario
+                </dt>
+                <dd className="mt-1 pl-8 text-lg text-stone-300">
+                  {SCHEDULE || 'Escríbenos y te enviamos los horarios de esta semana.'}
+                </dd>
+                {SCHEDULE_NOTE && <dd className="mt-1 pl-8 text-stone-400">{SCHEDULE_NOTE}</dd>}
+                <dd className="mt-2 pl-8">
+                  <a
+                    href={waLink(WA_MESSAGES.precios)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-fortis-gold underline underline-offset-4 hover:text-white"
+                  >
+                    Consulta precios por WhatsApp
+                  </a>
+                </dd>
               </div>
             </dl>
 

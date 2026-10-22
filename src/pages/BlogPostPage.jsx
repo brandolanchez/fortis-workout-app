@@ -30,7 +30,7 @@ const markdownComponents = {
   a: SmartLink,
   blockquote: ({ ...props }) => <blockquote className="border-l-4 border-fortis-gold pl-5 my-8 text-xl text-stone-200" {...props} />,
   table: ({ ...props }) => (
-    <div className="my-8 overflow-x-auto rounded-lg border border-stone-800">
+    <div tabIndex={0} role="region" aria-label="Tabla comparativa" className="my-8 overflow-x-auto rounded-lg border border-stone-800">
       <table className="w-full min-w-[36rem] text-left text-base" {...props} />
     </div>
   ),

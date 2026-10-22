@@ -64,7 +64,7 @@ const Footer = () => {
           <p className="text-sm">
             &copy; {year} <span className="font-heading">Fortis Workout</span>. Todos los derechos reservados.
           </p>
-          <p className="text-xs text-stone-500 mt-2">Sitio web diseñado y construido por @B_randombarz.</p>
+          <p className="text-xs text-stone-400 mt-2">Sitio web diseñado y construido por @B_randombarz.</p>
         </div>
       </div>
     </footer>

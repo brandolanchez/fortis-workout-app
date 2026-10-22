@@ -29,7 +29,7 @@ const FAQ = () => {
           >
             Quiero entrenar
           </a>
-          <p className="text-sm text-stone-500 mt-3">Te respondemos por WhatsApp.</p>
+          <p className="text-sm text-stone-400 mt-3">Te respondemos por WhatsApp.</p>
         </div>
       </div>
     </section>

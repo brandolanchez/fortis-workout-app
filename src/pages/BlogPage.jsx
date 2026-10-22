@@ -71,7 +71,7 @@ const BlogPage = () => {
           })}
         </div>
         {loading && (
-          <p className="text-center text-stone-500 mt-10">Cargando publicaciones de la comunidad…</p>
+          <p className="text-center text-stone-400 mt-10">Cargando publicaciones de la comunidad…</p>
         )}
       </div>
     </div>

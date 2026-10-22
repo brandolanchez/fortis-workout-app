@@ -44,7 +44,7 @@ const Testimonios = () => {
 
       {/* En móvil se desliza de lado; en desktop es una grilla de 4 */}
       <div className="mt-10 max-w-6xl mx-auto">
-        <div className="-mx-4 px-4 scroll-px-4 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 lg:mx-0 lg:px-0 lg:grid lg:grid-cols-4 lg:overflow-visible [scrollbar-width:none]">
+        <div tabIndex={0} role="region" aria-label="Testimonios de miembros; desliza para ver más" className="-mx-4 px-4 scroll-px-4 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 lg:mx-0 lg:px-0 lg:grid lg:grid-cols-4 lg:overflow-visible [scrollbar-width:none]">
           {testimonials.map((t) => (
             <figure
               key={t.name}
@@ -65,7 +65,7 @@ const Testimonios = () => {
                 />
                 <span>
                   <span className="font-heading text-xl block leading-tight">{t.name}</span>
-                  {t.since && <span className="text-sm text-stone-500">{t.since}</span>}
+                  {t.since && <span className="text-sm text-stone-400">{t.since}</span>}
                 </span>
               </figcaption>
             </figure>

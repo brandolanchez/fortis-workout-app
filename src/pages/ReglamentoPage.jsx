@@ -105,7 +105,7 @@ const ReglamentoPage = () => {
           {rules.map((rule, i) => (
             <article key={rule.title}>
               <h2 className="font-heading text-2xl md:text-3xl text-fortis-gold">
-                <span className="text-stone-500 mr-2">{i + 1}.</span>
+                <span className="text-stone-400 mr-2">{i + 1}.</span>
                 {rule.title}
               </h2>
               <div className="mt-3 space-y-3">
@@ -116,7 +116,7 @@ const ReglamentoPage = () => {
           ))}
         </div>
 
-        <p className="text-stone-500 text-sm mt-12">Última actualización: 2025.</p>
+        <p className="text-stone-400 text-sm mt-12">Última actualización: 2025.</p>
       </div>
     </div>
   );
