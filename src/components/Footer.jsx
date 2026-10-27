@@ -19,18 +19,18 @@ const Footer = () => {
           <div>
             <h3 className="font-heading text-lg text-white mb-4">Información</h3>
             <ul className="space-y-3">
-              <li><Link to="/reglamento" className="hover:text-white transition-colors">Reglamento Fortis</Link></li>
-              <li><Link to="/faq" className="hover:text-white transition-colors">Preguntas frecuentes</Link></li>
-              <li><Link to="/privacy" className="hover:text-white transition-colors">Políticas de privacidad</Link></li>
+              <li><Link to="/reglamento/" className="hover:text-white transition-colors">Reglamento Fortis</Link></li>
+              <li><Link to="/faq/" className="hover:text-white transition-colors">Preguntas frecuentes</Link></li>
+              <li><Link to="/privacy/" className="hover:text-white transition-colors">Políticas de privacidad</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-heading text-lg text-white mb-4">Comunidad</h3>
             <ul className="space-y-3">
-              <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-              <li><Link to="/testimonios" className="hover:text-white transition-colors">Testimonios</Link></li>
-              <li><Link to="/patrocinios" className="text-fortis-gold hover:text-white transition-colors">Patrocinar a Fortis</Link></li>
+              <li><Link to="/blog/" className="hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/testimonios/" className="hover:text-white transition-colors">Testimonios</Link></li>
+              <li><Link to="/patrocinios/" className="text-fortis-gold hover:text-white transition-colors">Patrocinar a Fortis</Link></li>
             </ul>
           </div>
 

@@ -65,11 +65,11 @@ La calistenia es entrenamiento de fuerza con tu propio peso. En Fortis la hacemo
 
 ### Si quieres ganar músculo
 
-Los dos funcionan. El músculo crece por estímulo progresivo, no por el tipo de equipo. En calistenia aumentas la dificultad cambiando palancas y volumen. En el gimnasio, agregando peso. Lo explicamos a fondo en [cómo ganar masa muscular con calistenia](/blog/ganar-masa-muscular-con-calistenia).
+Los dos funcionan. El músculo crece por estímulo progresivo, no por el tipo de equipo. En calistenia aumentas la dificultad cambiando palancas y volumen. En el gimnasio, agregando peso. Lo explicamos a fondo en [cómo ganar masa muscular con calistenia](/blog/ganar-masa-muscular-con-calistenia/).
 
 ### Si quieres bajar de peso
 
-Lo que más pesa es la alimentación. Después, la constancia. Elige el lugar al que de verdad vas a ir tres veces por semana. Más en [cómo quemar grasa entrenando en la Vereda](/blog/quemar-grasa-calistenia-vereda-del-lago).
+Lo que más pesa es la alimentación. Después, la constancia. Elige el lugar al que de verdad vas a ir tres veces por semana. Más en [cómo quemar grasa entrenando en la Vereda](/blog/quemar-grasa-calistenia-vereda-del-lago/).
 
 ### Si quieres mover mejor tu cuerpo
 

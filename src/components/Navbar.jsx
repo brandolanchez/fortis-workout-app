@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 
 const links = [
   { to: '/#ubicacion', label: 'Entrenar', hash: true },
-  { to: '/patrocinios', label: 'Patrocinios' },
-  { to: '/blog', label: 'Blog' },
+  { to: '/patrocinios/', label: 'Patrocinios' },
+  { to: '/blog/', label: 'Blog' },
 ];
 
 const Navbar = () => {

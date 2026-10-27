@@ -83,4 +83,4 @@ Si tienes mucho peso que perder o alguna condición de salud, consulta con un m�
 
 Entrenar solo funciona hasta que llega la primera semana difícil. En Fortis entrenamos en grupo en las barras del Parque Vereda del Lago, diagonal a las gradas, de lunes a sábado de 7:00 a 10:00 a. m. y de 6:00 a 10:00 p. m. El plan es de $35 al mes por tres sesiones semanales.
 
-¿Estás empezando de cero? Lee primero [cómo empezar calistenia si nunca has hecho una dominada](/blog/calistenia-para-principiantes-maracaibo) y luego escríbenos desde [fortisworkout.org](/).
+¿Estás empezando de cero? Lee primero [cómo empezar calistenia si nunca has hecho una dominada](/blog/calistenia-para-principiantes-maracaibo/) y luego escríbenos desde [fortisworkout.org](/).

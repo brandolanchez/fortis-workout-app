@@ -13,7 +13,7 @@ const NotFoundPage = ({ standalone = false }) => {
         Volver al inicio
       </a>
       {!standalone && (
-        <Link to="/blog" className="mt-4 text-stone-400 hover:text-white underline underline-offset-4">Ir al blog</Link>
+        <Link to="/blog/" className="mt-4 text-stone-400 hover:text-white underline underline-offset-4">Ir al blog</Link>
       )}
     </section>
   );

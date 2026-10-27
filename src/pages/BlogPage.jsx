@@ -61,7 +61,7 @@ const BlogPage = () => {
             return (
               <Link
                 key={post.slug}
-                to={`/blog/${post.slug}`}
+                to={`/blog/${post.slug}/`}
                 className={cardClasses}
               >
                 <div className="flex-1">

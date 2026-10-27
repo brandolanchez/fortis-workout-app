@@ -86,7 +86,7 @@ En Fortis no damos clases de Hyrox, pero la calistenia es una base muy útil si 
 - **Circuitos por tiempo** con dominadas, fondos y sentadillas para trabajar el cansancio acumulado.
 - **Trote en la Vereda** antes o después de la sesión para sumar la parte de carrera.
 
-Si corres, también te puede servir nuestra guía de [calistenia para corredores](/blog/calistenia-para-corredores-maracaibo).
+Si corres, también te puede servir nuestra guía de [calistenia para corredores](/blog/calistenia-para-corredores-maracaibo/).
 
 ## ¿Funcional en gimnasio o funcional al aire libre?
 
@@ -99,7 +99,7 @@ Entrenar funcional al aire libre en la Vereda del Lago tiene otras:
 - Aprendes un sistema que puedes repetir en cualquier parque, incluso cuando viajas.
 - Cuesta menos: en Fortis el plan es de $35 al mes por tres sesiones semanales.
 
-Si te preocupa el sol, te dejamos nuestros [consejos para entrenar con el calor de Maracaibo](/blog/entrenar-con-calor-maracaibo).
+Si te preocupa el sol, te dejamos nuestros [consejos para entrenar con el calor de Maracaibo](/blog/entrenar-con-calor-maracaibo/).
 
 ## Empieza con tu propio peso
 

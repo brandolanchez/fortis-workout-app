@@ -35,7 +35,7 @@ Los estáticos cargan mucho las muñecas, los codos y los hombros. Por eso convi
 - **30 segundos de plancha** sin que se hunda la cadera.
 - **Muñecas calientes y con movilidad**, siempre.
 
-Si todavía no llegas, empieza por la [guía de calistenia para principiantes](/blog/calistenia-para-principiantes-maracaibo). Puedes practicar el L-sit recogido y la parada contra la pared mientras construyes esa base.
+Si todavía no llegas, empieza por la [guía de calistenia para principiantes](/blog/calistenia-para-principiantes-maracaibo/). Puedes practicar el L-sit recogido y la parada contra la pared mientras construyes esa base.
 
 ## Los estáticos principales y su dificultad
 
@@ -91,7 +91,7 @@ Cada etapa puede tomar semanas o meses. Trabaja con series de 5 a 10 segundos y 
 - **Al principio de la sesión**, cuando estás fresco. La técnica se aprende mejor sin fatiga.
 - **2 o 3 veces por semana**, no todos los días. Muñecas y hombros necesitan recuperarse.
 - **Pocos segundos y buena forma** antes que mucho tiempo con mala técnica.
-- **Con calor, más descanso** entre intentos. Lee [cómo entrenar con el calor de Maracaibo](/blog/entrenar-con-calor-maracaibo).
+- **Con calor, más descanso** entre intentos. Lee [cómo entrenar con el calor de Maracaibo](/blog/entrenar-con-calor-maracaibo/).
 
 ## Por qué aprender estáticos en grupo
 

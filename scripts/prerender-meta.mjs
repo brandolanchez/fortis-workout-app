@@ -161,14 +161,14 @@ const llms = `# Fortis Workout
 ## Páginas principales
 
 - [Inicio](${SITE_URL}/): qué es Fortis Workout, horario, ubicación y cómo inscribirse.
-- [Preguntas frecuentes](${SITE_URL}/faq): horario, precio, qué llevar y cómo empezar.
-- [Patrocinios](${SITE_URL}/patrocinios): opciones para marcas que quieran patrocinar al club.
-- [Reglamento](${SITE_URL}/reglamento): normas de la comunidad.
-- [Blog](${SITE_URL}/blog): artículos sobre calistenia y entrenamiento al aire libre en Maracaibo.
+- [Preguntas frecuentes](${SITE_URL}/faq/): horario, precio, qué llevar y cómo empezar.
+- [Patrocinios](${SITE_URL}/patrocinios/): opciones para marcas que quieran patrocinar al club.
+- [Reglamento](${SITE_URL}/reglamento/): normas de la comunidad.
+- [Blog](${SITE_URL}/blog/): artículos sobre calistenia y entrenamiento al aire libre en Maracaibo.
 
 ## Artículos
 
-${postList.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug})${p.description ? `: ${p.description}` : ''}`).join('\n')}
+${postList.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}/)${p.description ? `: ${p.description}` : ''}`).join('\n')}
 `;
 fs.writeFileSync(path.join(DIST, 'llms.txt'), llms);
 

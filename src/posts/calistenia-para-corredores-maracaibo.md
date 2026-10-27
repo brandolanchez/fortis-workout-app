@@ -33,7 +33,7 @@ La Vereda es la ruta favorita de los corredores de la ciudad por buenas razones:
 - **Casi siempre hay gente**, algo que da tranquilidad temprano y de noche.
 - **Tiene un área de barras**, donde puedes hacer tu trabajo de fuerza antes o después de trotar.
 
-Para los horarios, aplica lo mismo que para cualquier entrenamiento al aire libre aquí: **temprano en la mañana o desde que baja el sol**. Lo explicamos en [cómo entrenar con el calor de Maracaibo](/blog/entrenar-con-calor-maracaibo).
+Para los horarios, aplica lo mismo que para cualquier entrenamiento al aire libre aquí: **temprano en la mañana o desde que baja el sol**. Lo explicamos en [cómo entrenar con el calor de Maracaibo](/blog/entrenar-con-calor-maracaibo/).
 
 ## Por qué un corredor necesita fuerza
 

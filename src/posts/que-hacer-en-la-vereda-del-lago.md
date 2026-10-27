@@ -85,4 +85,4 @@ La Vereda del Lago está en la zona de El Milagro, en el norte de Maracaibo, a o
 
 Caminar sola o solo está bien. Pero si quieres un plan, progresar en fuerza y entrenar con gente que te espera, ven a las barras. Fortis entrena en el área de barras del Parque Vereda del Lago, diagonal a las gradas, de lunes a sábado de 7:00 a 10:00 a. m. y de 6:00 a 10:00 p. m. Tú eliges tres días a la semana por $35 al mes.
 
-Si es tu primera vez, mira cómo [empezar calistenia desde cero](/blog/calistenia-para-principiantes-maracaibo) y escríbenos desde [fortisworkout.org](/).
+Si es tu primera vez, mira cómo [empezar calistenia desde cero](/blog/calistenia-para-principiantes-maracaibo/) y escríbenos desde [fortisworkout.org](/).

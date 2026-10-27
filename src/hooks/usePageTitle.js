@@ -35,7 +35,7 @@ export const usePageTitle = (fallbackTitle, { noindex = false } = {}) => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const route = SEO[pathname];
+    const route = SEO[pathname.length > 1 ? pathname.replace(/\/$/, '') : pathname];
     applySeo({
       title: route?.title || (fallbackTitle ? `${fallbackTitle} | ${SITE_NAME}` : SEO['/'].title),
       description: route?.description,

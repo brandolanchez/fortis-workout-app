@@ -43,4 +43,6 @@ export const SEO = {
   },
 };
 
-export const canonicalFor = (path) => `${SITE_URL}${path === '/' ? '/' : path.replace(/\/$/, '')}`;
+// Netlify sirve cada página como carpeta (/faq/) y redirige /faq a /faq/.
+// Por eso todas las direcciones oficiales llevan barra al final.
+export const canonicalFor = (path) => `${SITE_URL}${path === '/' ? '/' : path.replace(/\/?$/, '/')}`;

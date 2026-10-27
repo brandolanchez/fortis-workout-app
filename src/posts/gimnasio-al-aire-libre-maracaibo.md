@@ -66,7 +66,7 @@ Si quieres probar por tu cuenta, esta rutina sirve para empezar. Hazla dos o tre
 5. **Colgarse de la barra:** 3 series de 20 a 30 segundos.
 6. **Plancha:** 3 series de 30 segundos.
 
-Descansa 60 a 90 segundos entre series. Cuando completes todas las repeticiones con buena técnica, pasa a una versión más difícil. Si no sabes cuál es la siguiente, lee nuestra [guía de calistenia para principiantes](/blog/calistenia-para-principiantes-maracaibo).
+Descansa 60 a 90 segundos entre series. Cuando completes todas las repeticiones con buena técnica, pasa a una versión más difícil. Si no sabes cuál es la siguiente, lee nuestra [guía de calistenia para principiantes](/blog/calistenia-para-principiantes-maracaibo/).
 
 ## Lo que nadie te dice de entrenar afuera
 
@@ -77,7 +77,7 @@ Entrenar al aire libre tiene sus reglas:
 - **Lleva tu agua.** No cuentes con comprar en el momento.
 - **Comparte el espacio.** El área es pública: alterna series y no acapares una estación.
 
-Tenemos una guía completa sobre [cómo entrenar con el calor de Maracaibo](/blog/entrenar-con-calor-maracaibo).
+Tenemos una guía completa sobre [cómo entrenar con el calor de Maracaibo](/blog/entrenar-con-calor-maracaibo/).
 
 ## Entrena acompañado
 

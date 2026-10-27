@@ -88,4 +88,4 @@ Si hay confusión, vómitos o el malestar no mejora con descanso y agua, busca a
 
 Entrenar en grupo ayuda: alguien te recuerda tomar agua, te dice cuándo bajar la intensidad y te espera en la próxima sesión. En Fortis entrenamos en las barras del Parque Vereda del Lago, diagonal a las gradas, en los horarios más frescos del día. El plan es de $35 al mes por tres sesiones semanales.
 
-¿Quieres saber más de la Vereda? Lee nuestra [guía de actividades en la Vereda del Lago](/blog/que-hacer-en-la-vereda-del-lago). Para inscribirte, escríbenos desde [fortisworkout.org](/).
+¿Quieres saber más de la Vereda? Lee nuestra [guía de actividades en la Vereda del Lago](/blog/que-hacer-en-la-vereda-del-lago/). Para inscribirte, escríbenos desde [fortisworkout.org](/).

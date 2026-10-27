@@ -91,7 +91,7 @@ const BlogPostPage = () => {
       <div className="pt-16 text-center text-white font-sans min-h-[70vh] px-4">
         <h1 className="text-5xl font-heading">Este post no existe</h1>
         <p className="mt-4 text-lg text-stone-400">Puede que el enlace esté mal escrito o que el post se haya movido.</p>
-        <Link to="/blog" className="mt-8 inline-block bg-fortis-gold text-black font-bold py-3 px-6 rounded-lg">
+        <Link to="/blog/" className="mt-8 inline-block bg-fortis-gold text-black font-bold py-3 px-6 rounded-lg">
           Volver al blog
         </Link>
       </div>
@@ -105,7 +105,7 @@ const BlogPostPage = () => {
     <div className="pt-8 pb-20 bg-black font-sans text-stone-300">
       <article className="max-w-3xl mx-auto px-4">
         <header className="mb-10">
-          <Link to="/blog" className="text-stone-400 hover:text-white text-sm">Blog</Link>
+          <Link to="/blog/" className="text-stone-400 hover:text-white text-sm">Blog</Link>
           <h1 className="mt-3 font-heading text-5xl md:text-6xl text-white leading-[0.95]">{post.title}</h1>
           <p className="text-stone-400 mt-4 text-sm">
             {formatDate(post.date)} · {post.readingMinutes} min de lectura
@@ -176,7 +176,7 @@ const BlogPostPage = () => {
           <ul className="divide-y divide-stone-800 border-y border-stone-800">
             {related.map((p) => (
               <li key={p.slug}>
-                <Link to={`/blog/${p.slug}`} className="block py-4 group">
+                <Link to={`/blog/${p.slug}/`} className="block py-4 group">
                   <span className="font-heading text-2xl text-white group-hover:text-fortis-gold">{p.title}</span>
                   {p.description && <span className="block mt-1 text-stone-400 line-clamp-2">{p.description}</span>}
                 </Link>

@@ -93,7 +93,7 @@ La diferencia con un WOD es que cada ejercicio tiene su progresión: si todavía
 - Te importa el presupuesto.
 - Prefieres entrenar al aire libre, frente al lago, en vez de en un local cerrado.
 
-Si todavía dudas entre calistenia y un gimnasio tradicional, te puede servir nuestra comparación de [gimnasio vs. calistenia en Maracaibo](/blog/gimnasio-vs-calistenia-maracaibo).
+Si todavía dudas entre calistenia y un gimnasio tradicional, te puede servir nuestra comparación de [gimnasio vs. calistenia en Maracaibo](/blog/gimnasio-vs-calistenia-maracaibo/).
 
 ## Ven a probar a la Vereda
 

@@ -81,4 +81,4 @@ Distingue entre el cansancio normal del músculo y el dolor que avisa algo:
 
 La técnica es lo que más protege tus articulaciones, y es difícil corregirla solo. En Fortis la técnica se corrige en cada sesión, y cada persona hace la versión del ejercicio que le corresponde. Entrenamos en las barras del Parque Vereda del Lago, diagonal a las gradas, de lunes a sábado de 7:00 a 10:00 a. m. y de 6:00 a 10:00 p. m.
 
-Si estás empezando, lee nuestra [guía para principiantes](/blog/calistenia-para-principiantes-maracaibo). Cuando quieras venir, escríbenos desde [fortisworkout.org](/).
+Si estás empezando, lee nuestra [guía para principiantes](/blog/calistenia-para-principiantes-maracaibo/). Cuando quieras venir, escríbenos desde [fortisworkout.org](/).

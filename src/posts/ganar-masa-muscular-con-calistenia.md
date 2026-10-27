@@ -83,7 +83,7 @@ Ningún programa funciona si comes poco o duermes mal:
 - **Proteína:** inclúyela en cada comida. Huevos, pollo, pescado, caraotas y lácteos son opciones accesibles en Maracaibo.
 - **Calorías:** para ganar masa necesitas comer un poco más de lo que gastas.
 - **Sueño:** siete a ocho horas. Ahí es donde se recupera el músculo.
-- **Hidratación:** con el calor de Maracaibo se pierde mucho líquido. Lee [cómo entrenar con calor](/blog/entrenar-con-calor-maracaibo).
+- **Hidratación:** con el calor de Maracaibo se pierde mucho líquido. Lee [cómo entrenar con calor](/blog/entrenar-con-calor-maracaibo/).
 
 Si tienes una condición médica o un objetivo muy específico, consulta con un nutricionista.
 

@@ -89,7 +89,7 @@ const Hero = () => {
             <FaWhatsapp size={26} />
             Quiero entrenar
           </a>
-          <Link to="/patrocinios" className="text-stone-300 hover:text-white underline underline-offset-4 decoration-stone-500">
+          <Link to="/patrocinios/" className="text-stone-300 hover:text-white underline underline-offset-4 decoration-stone-500">
             ¿Tienes una marca? Patrocina a Fortis
           </Link>
         </div>

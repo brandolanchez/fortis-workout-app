@@ -85,7 +85,7 @@ Cuando ya tienes 5 a 8 dominadas limpias y 15 flexiones seguidas, empieza lo div
 - **Más fuerza en barra:** dominadas con pausa, dominadas lastradas y, más adelante, el muscle up.
 - **Estáticos:** posiciones que se sostienen, como la parada de manos (handstand), el L-sit, el front lever y la plancha.
 
-Los estáticos piden paciencia y mucha técnica, pero se aprenden con progresiones igual que la dominada. Lo explicamos paso a paso en nuestra [guía de parada de manos y estáticos](/blog/parada-de-manos-y-estaticos-maracaibo).
+Los estáticos piden paciencia y mucha técnica, pero se aprenden con progresiones igual que la dominada. Lo explicamos paso a paso en nuestra [guía de parada de manos y estáticos](/blog/parada-de-manos-y-estaticos-maracaibo/).
 
 ## Calistenia para mujeres principiantes
 
@@ -95,11 +95,11 @@ Es una de las dudas más comunes, y la respuesta es simple: el método es el mis
 
 - **Querer hacer todo el primer día.** Te vas a levantar adolorido y no vas a volver.
 - **Copiar a quien lleva años.** Tu progresión es tuya.
-- **Entrenar al mediodía.** En Maracaibo, mala idea. Lee nuestros [consejos para entrenar con calor](/blog/entrenar-con-calor-maracaibo).
+- **Entrenar al mediodía.** En Maracaibo, mala idea. Lee nuestros [consejos para entrenar con calor](/blog/entrenar-con-calor-maracaibo/).
 - **Entrenar solo y sin plan.** Es lo que más rápido hace que lo dejes.
 
 ## Empieza acompañado en la Vereda
 
 En Fortis la mayoría empezó sin poder hacer una dominada. Entrenamos en grupo en las barras del Parque Vereda del Lago, diagonal a las gradas, de lunes a sábado de 7:00 a 10:00 a. m. y de 6:00 a 10:00 p. m. El plan es de $35 al mes por tres sesiones semanales.
 
-¿Dudas antes de venir? Revisa las [preguntas frecuentes](/faq) o escríbenos desde [fortisworkout.org](/).
+¿Dudas antes de venir? Revisa las [preguntas frecuentes](/faq/) o escríbenos desde [fortisworkout.org](/).
