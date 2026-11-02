@@ -1,14 +1,14 @@
 ---
-title: "Entrenamiento funcional en Maracaibo: por qué empezar por dominar tu propio peso"
-seoTitle: "Entrenamiento funcional en Maracaibo con calistenia"
-description: "Qué es el entrenamiento funcional, en qué se parece a la calistenia y por qué tu propio peso es la mejor base. Entrena funcional en la Vereda del Lago."
+title: "Funcional al aire libre en la Vereda del Lago: empieza por dominar tu propio peso"
+seoTitle: "Funcional al aire libre en la Vereda del Lago | Fortis"
+description: "Entrena funcional al aire libre en las barras de la Vereda del Lago: qué tiene de funcional la calistenia y por qué tu propio peso es la mejor base."
 date: "2026-09-30"
 image: "/assets/Img/nosotros/20251216_175758.webp"
 imageAlt: "Atleta de Fortis haciendo un movimiento dinámico en las barras de la Vereda del Lago"
 keywords:
-  - entrenamiento funcional maracaibo
-  - clases de funcional maracaibo
   - funcional al aire libre vereda del lago
+  - entrenar al aire libre en maracaibo
+  - calistenia funcional
   - entrenamiento funcional y calistenia
   - preparación hyrox con calistenia
 faq:
@@ -100,6 +100,10 @@ Entrenar funcional al aire libre en la Vereda del Lago tiene otras:
 - Cuesta menos: en Fortis el plan es de $35 al mes por tres sesiones semanales.
 
 Si te preocupa el sol, te dejamos nuestros [consejos para entrenar con el calor de Maracaibo](/blog/entrenar-con-calor-maracaibo/).
+
+## ¿No puedes venir a la Vereda?
+
+Si tu horario o la distancia no te dejan entrenar con nosotros en el parque, tenemos una opción online. [Zenkai Academy](https://zenkai.fortisworkout.org/) es el programa de entrenamiento funcional y calistenia online que nació en nuestra comunidad: rutinas en video, plan nutricional y coaches que revisan tu técnica por video y en sesiones en vivo. Entrenas donde estés, con el mismo método.
 
 ## Empieza con tu propio peso
 
