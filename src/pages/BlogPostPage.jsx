@@ -98,7 +98,10 @@ const BlogPostPage = () => {
     );
   }
 
-  const related = posts.filter((p) => p.slug !== slug).slice(0, 3);
+  // Artículos relacionados: los 3 siguientes en orden circular, para que cada post
+  // reciba enlaces internos desde otros (antes todos enlazaban a los 3 más recientes).
+  const current = posts.findIndex((p) => p.slug === slug);
+  const related = [1, 2, 3].map((n) => posts[(current + n) % posts.length]).filter((p) => p.slug !== slug);
   const [firstHalf, secondHalf] = splitForMidCta(post.body);
 
   return (
