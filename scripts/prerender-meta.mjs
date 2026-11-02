@@ -28,12 +28,13 @@ const setTag = (html, regex, replacement) => {
   return html.replace(regex, replacement);
 };
 
-const render = ({ route, title, description, jsonLd, noscript, image, preload, type = 'website' }) => {
+const render = ({ route, title, description, jsonLd, noscript, image, preload, type = 'website', noindex = false }) => {
   const url = canonicalFor(route);
   let html = template;
   html = setTag(html, /<title>[\s\S]*?<\/title>/, `<title>${esc(title)}</title>`);
   html = setTag(html, /<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(description)}">`);
   html = setTag(html, /<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">`);
+  if (noindex) html = setTag(html, /<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex, follow">');
   html = setTag(html, /<meta property="og:type" content="[^"]*">/, `<meta property="og:type" content="${type}">`);
   html = setTag(html, /<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(title)}">`);
   html = setTag(html, /<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(description)}">`);
@@ -131,8 +132,9 @@ for (const file of fs.readdirSync(POSTS).filter((f) => f.endsWith('.md'))) {
     });
   }
   const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
-  write(route, render({ route, title, description, image, jsonLd, preload: postPreloads(a.image), type: 'article', noscript: noscriptFor(a.title, description) }));
-  sitemap.push({ loc: canonicalFor(route), lastmod: String(a.date || today).slice(0, 10), priority: '0.5' });
+  write(route, render({ route, title, description, image, jsonLd, preload: postPreloads(a.image), type: 'article', noscript: noscriptFor(a.title, description), noindex: a.noindex === true }));
+  // Posts con `noindex: true` en el encabezado: se publican, pero no van al sitemap ni a Google.
+  if (a.noindex !== true) sitemap.push({ loc: canonicalFor(route), lastmod: String(a.date || today).slice(0, 10), priority: '0.5' });
 }
 
 fs.writeFileSync(
@@ -147,6 +149,7 @@ const postList = fs
   .readdirSync(POSTS)
   .filter((f) => f.endsWith('.md'))
   .map((f) => ({ slug: f.replace(/\.md$/, ''), ...fm(fs.readFileSync(path.join(POSTS, f), 'utf8')).attributes }))
+  .filter((p) => p.noindex !== true)
   .sort((x, y) => new Date(y.date) - new Date(x.date));
 
 const llms = `# Fortis Workout

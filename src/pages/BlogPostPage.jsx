@@ -80,6 +80,7 @@ const BlogPostPage = () => {
         title: `${post.seoTitle || post.title}${post.seoTitle ? '' : ' | Fortis Workout'}`,
         description: post.description,
         path: `/blog/${slug}`,
+        noindex: post.noindex === true,
       });
     } else {
       applySeo({ title: 'Post no encontrado | Fortis Workout', noindex: true });
@@ -100,8 +101,10 @@ const BlogPostPage = () => {
 
   // Artículos relacionados: los 3 siguientes en orden circular, para que cada post
   // reciba enlaces internos desde otros (antes todos enlazaban a los 3 más recientes).
-  const current = posts.findIndex((p) => p.slug === slug);
-  const related = [1, 2, 3].map((n) => posts[(current + n) % posts.length]).filter((p) => p.slug !== slug);
+  // Los posts marcados con `noindex` no se recomiendan.
+  const linkable = posts.filter((p) => p.noindex !== true);
+  const current = Math.max(linkable.findIndex((p) => p.slug === slug), -1);
+  const related = [1, 2, 3].map((n) => linkable[(current + n + linkable.length) % linkable.length]).filter((p) => p && p.slug !== slug);
   const [firstHalf, secondHalf] = splitForMidCta(post.body);
 
   return (

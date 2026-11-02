@@ -1,6 +1,7 @@
 ---
 title: "Cerrando el año a lo Grande"
 date: "2025-12-28"
+noindex: true
 description: "Este 2025 ha sido un año increíble para el crecimiento de nuestro club. Queremos celebrar que tenemos salud, vida y, sobre todo, las ganas de reventar un 2026 lleno de progreso para la calistenia en nuestra ciudad, Maracaibo."
 ---
 

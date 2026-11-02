@@ -1,6 +1,7 @@
 ---
 title: "¡Nuestra Primera Entrada!"
 date: "2025-12-10"
+noindex: true
 description: "Bienvenidos al blog de Fortis Workout. Aquí compartiremos noticias, consejos y la filosofía de nuestra comunidad."
 ---
 
